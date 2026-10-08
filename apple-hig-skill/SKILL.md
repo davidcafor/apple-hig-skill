@@ -1,36 +1,57 @@
 ---
 name: apple-hig-skill
-description: Plan or review Apple-platform interfaces against Apple's Human Interface Guidelines, with platform-specific sources and explicit validation limits. Use for native interface design and HIG reviews, not general Swift correctness or performance reviews.
+description: Design, implement, or review native Apple interfaces against the Human Interface Guidelines, with platform-specific decisions and source-backed findings. Use for HIG, interaction, layout, and accessibility work.
 license: CC-BY-4.0
 metadata:
   author: davidcafor
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Apple HIG Skill
 
-Foundation preview: platform routing and review workflow are available; comprehensive component coverage and behavioral validation are pending.
+Make interface decisions that fit the user's task, platform, and abilities. This is an independent interpretation of Apple's guidance, not Apple certification. Follow the user's requested scope; do not redesign a product merely to exercise this skill.
 
-## Establish context
+## Establish the task
 
-Identify the requested task, target platforms, supported OS versions, available window space, and input methods from the project. Ask only for material information that cannot be inferred. Preserve the project's deployment targets and the user's scope.
+Identify **review**, **design proposal**, or **implementation** from the request. Inspect the relevant views, entry points, deployment targets, SDK/toolchain, and navigation/state ownership. Identify target platforms, input methods, available window sizes, and the core task. Ask only for missing information that would change the design materially.
 
-Read [platforms.md](references/platforms.md) for the relevant platform only. Consult the linked official HIG page and the component-specific guidance needed for the task. Prefer current Apple documentation for API availability. Do not assume the newest SDK is installed.
+- **Review:** inspect first; report supported problems without editing unless requested.
+- **Design:** compare suitable native patterns, explain the tradeoff, and specify important states.
+- **Implementation:** make the scoped change and validate what the environment supports. Do not stop at recommendations when changes were requested.
 
-## Apply guidance with evidence
+## Load only relevant references
 
-- Prefer native controls and platform conventions where they serve the task; explain any necessary customization.
-- Treat platform, window size, input method, and accessibility settings as separate design constraints.
-- Check navigation, presentation, content hierarchy, available actions, text scaling, keyboard or focus behavior, and accessibility semantics where relevant.
-- Do not turn a recommendation into an absolute rule or generalize one platform's measurements to all platforms.
-- Distinguish an explicit Apple requirement, an Apple recommendation, and your implementation interpretation. Link the exact supporting source for substantive findings.
-- When sources are unavailable, state the limitation and mark the advice provisional. Never invent a quotation, numeric requirement, version, or source verification date.
-- Avoid unrelated code modernization and preserve valid custom design choices.
+Start with the target platform in [platforms.md](references/platforms.md). Then select topics from this table. Do not load the complete library for a narrow task.
 
-## Deliver and validate
+| Task | Reference |
+| --- | --- |
+| Tabs, sidebars, hierarchy, toolbars, search, windows | [Navigation](references/navigation.md) |
+| Sheets, popovers, alerts, confirmation, cancellation | [Presentation](references/presentation.md) |
+| Buttons, menus, fields, toggles, pickers, forms | [Controls](references/controls.md) |
+| Resizing, safe areas, typography, color, materials, symbols | [Layout and visual design](references/layout-visual.md) |
+| VoiceOver, motor access, keyboard/focus, motion, contrast | [Accessibility and input](references/accessibility-input.md) |
+| Settings, onboarding, loading, errors, accounts, permissions | [Product flows](references/product-flows.md) |
+| Localization, RTL, interface copy | [Writing and localization](references/writing-localization.md) |
+| Widgets, complications, Live Activities, notifications, CarPlay | [System experiences](references/system-experiences.md) |
+| Mapping design to SwiftUI, API checks, original code examples | [SwiftUI implementation](references/swiftui-implementation.md) |
+| Evidence, severity, conflicting guidance, test matrix, output | [Review and validation](references/review-validation.md) |
+| Source provenance and freshness | [Source registry](references/sources.md) |
 
-For a review, report the affected screen or file, observed problem, platform and context, user impact, official source, proposed correction, and how to verify it. Prioritize findings by impact. Do not manufacture findings for correct designs.
+## Apply judgment with evidence
 
-For implementation, make the requested change using APIs available to the project, then perform the relevant checks the environment supports.
+1. Establish an observable problem and user impact before recommending a change. Source code, screenshots, and runtime behavior provide different evidence.
+2. Prefer system components when they fit the task. Custom controls and brand styling are valid when they preserve interaction, accessibility, and adaptation.
+3. Apply platform-specific guidance over generic advice. A watch interaction is not a smaller phone screen; a Mac command is not necessarily a touch target.
+4. Label conclusions **Apple guidance**, **implementation interpretation**, or **needs verification**. A local rule ID is a project identifier, not an Apple rule number. HIG recommendations are not automatically App Store requirements.
+5. Follow the source links for disputed, numeric, or version-sensitive claims. The registry records a dated review, not a guarantee of current behavior. If current documentation is unavailable, use the snapshot cautiously and mark uncertainty.
+6. Preserve functionality and user state across layout changes. Prefer rearranging or revealing content over removing access to it.
+7. Respect existing deployment targets and architecture. Check both SDK support and runtime availability before introducing APIs. Do not import another skill's stylistic preferences as HIG requirements.
+8. Keep the scope narrow enough to verify. Do not rewrite data, concurrency, persistence, or networking code unless necessary for the interface task.
 
-Distinguish code inspection from rendered UI review, accessibility testing, and device testing. Report untested cases, including resizing, larger text, alternate input, and localization when applicable. Do not claim comprehensive HIG compliance or certification.
+## Deliver
+
+For a finding, include the affected file/line or screen, observed issue, user impact, applicable platform, rule/source, focused correction, and validation status. Use the severity guidance in [review-validation.md](references/review-validation.md). Separate confirmed findings from questions; omit unsupported accusations and praise-only findings.
+
+For implementation, explain the resulting behavior and report checks actually performed. When useful, use [examples](references/swiftui-implementation.md#original-examples) as small starting points, not an app template.
+
+State remaining runtime/device checks. Never equate compilation, a screenshot, or an accessibility audit with complete HIG compliance. Do not claim experience as an Apple employee or knowledge of undocumented Apple policy.

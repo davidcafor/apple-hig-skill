@@ -10,7 +10,7 @@ An independent agent skill by [davidcafor](https://github.com/davidcafor), groun
 
 **iOS · iPadOS · macOS · watchOS · tvOS · visionOS**
 
-[![Status: Foundation](https://img.shields.io/badge/status-foundation-blue)](#project-status)
+[![Status: Expanded preview](https://img.shields.io/badge/status-expanded_preview-blue)](#project-status)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey)](LICENSE)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-green)](CONTRIBUTING.md)
 
@@ -26,21 +26,24 @@ Apple HIG Skill helps an agent make those decisions deliberately, using Apple's 
 
 ## Project status
 
-**Foundation preview — not a complete HIG audit or a stable release.**
+**Version 0.2.0 — expanded preview.**
 
-The initial skill establishes a source-backed review workflow and platform routing. Detailed component rules, implementation examples, behavioral evaluations, and device validation are still being developed. Using this skill does not certify HIG compliance or App Store approval.
+The skill now contains actionable platform and component references, original SwiftUI examples, a dated official-source registry, and a behavioral evaluation suite. It supports real review and implementation work, while remaining a curated library rather than an exhaustive HIG audit or a certification of App Store approval.
 
 | Area | Current coverage |
 | --- | --- |
-| Six platform families | Official source routing and review questions |
-| Source attribution | Required by the review workflow |
-| Accessibility and adaptive layout | Initial cross-platform review prompts |
-| Component-specific guidance | Planned |
-| Widgets, Live Activities, CarPlay | Planned |
-| Automated behavioral evaluation | Planned |
-| Simulator and device validation | Not yet performed |
+| iOS, iPadOS, macOS, watchOS, tvOS, visionOS | Separate platform references and validation questions |
+| Components and flows | Navigation, tabs, sidebars, toolbars, search, windows, presentation, controls, settings, onboarding, loading, accounts, privacy |
+| Accessibility and adaptation | Semantics, input, focus, text, contrast, motion, resizing, localization and RTL |
+| System surfaces | Review guidance for widgets, complications, Live Activities, notifications and CarPlay |
+| SwiftUI examples | Seven original examples; typechecked across their declared Apple SDK targets |
+| Provenance | Exact official URLs, review dates and review scope |
+| Behavioral evaluation | 24 cases with expected behaviors and false-positive controls; see actual execution status below |
+| Runtime/device validation | Not yet performed for the sample interfaces |
 
-## Try the foundation
+See the [validation record](evals/RESULTS.md), [source registry](apple-hig-skill/references/sources.md), and [changelog](CHANGELOG.md). Compilation and structural checks do not establish interface quality on their own.
+
+## Install
 
 With [Node.js](https://nodejs.org/) installed, run this command from the project where you want to use the skill:
 
@@ -60,7 +63,7 @@ To inspect the available skill without installing it:
 npx skills add davidcafor/apple-hig-skill --list
 ```
 
-No npm package or account is required to publish this skill: the installer reads its `SKILL.md` and supporting files directly from this public GitHub repository. This remains a foundation preview; installation does not imply complete HIG coverage.
+No npm package or account is required to publish this skill: the installer reads its `SKILL.md` and supporting files directly from this public GitHub repository. Installation does not imply complete HIG coverage.
 
 For manual installation, copy the `apple-hig-skill/` directory into your agent's supported skills directory, preserving the included license and attribution files.
 
@@ -120,7 +123,7 @@ Use `/apple-hig-skill` in Claude Code or `$apple-hig-skill` in Codex before any 
 | Adapt to Apple Watch | Plan a brief watchOS interaction for this feature. Explain which content and actions should be prioritized. |
 | Fix a known problem | Fix the clipped actions on this narrow iPad layout. Preserve the current deployment target and unrelated behavior. |
 
-These are requests for the foundation workflow, not evidence of complete or tested coverage in each area. Give the agent access to the relevant project files; screenshots can support visual review but cannot prove interaction or accessibility behavior.
+These examples show how to scope a request; they are not evidence that every resulting interface has been tested. Give the agent access to the relevant project files; screenshots can support visual review but cannot prove interaction or accessibility behavior.
 
 ## How it works
 
@@ -132,19 +135,41 @@ These are requests for the foundation workflow, not evidence of complete or test
 
 The skill uses original summaries and links to Apple documentation. It does not bundle Apple's manuals or design assets.
 
+## What makes the skill useful
+
+The entry point loads only the relevant platform and topic references. Reviews distinguish **Apple guidance**, **implementation interpretation**, and **needs verification**, with observable impact and focused corrections.
+
+The skill explicitly avoids common overclaims: custom controls are not automatically wrong; a screenshot cannot prove VoiceOver support; one touch-target measurement does not apply to every Apple platform; the newest SDK does not make an API available on the oldest supported OS.
+
+Browse the [skill entry point](apple-hig-skill/SKILL.md), [SwiftUI examples](apple-hig-skill/references/swiftui-implementation.md), and [evaluation protocol](evals/README.md).
+
 ## Roadmap toward a stable release
 
-The current release establishes the workflow. The following work is still pending:
+The remaining work is evidence-driven:
 
-- **Detailed platform references:** separate, actionable guidance for iOS, iPadOS, macOS, watchOS, tvOS and visionOS.
-- **Component decisions:** navigation, tabs, sidebars, toolbars, settings, sheets, popovers, alerts, forms, search and empty states, including contextual exceptions.
-- **Accessibility and adaptation:** text scaling, assistive technologies, contrast, motion, keyboard and focus, localization, and changing window sizes.
-- **Traceable rules:** exact Apple sources, actual verification dates, applicable platforms, guidance strength and implementation interpretations.
-- **Practical examples:** original before/after examples verified against their stated SDK and deployment targets.
-- **Behavioral evaluations:** realistic tasks with and without the skill, valid designs that must not be flagged, and regressions checked in both Claude Code and Codex.
-- **Maintenance:** source review, coverage tracking and release notes as guidance evolves.
+- Run the complete behavioral suite in both Claude Code and Codex, comparing the same tasks with and without the skill.
+- Exercise the examples in running apps, including VoiceOver, larger text, keyboard/focus, resizing, and appropriate hardware inputs.
+- Add realistic multi-file implementation fixtures and regression cases from actual use.
+- Deepen specialist coverage as tested use cases justify it: media, games, HealthKit experiences, Wallet/Apple Pay, Pencil tools, advanced spatial interaction, and additional extensions.
+- Revisit source guidance and API availability as Apple documentation evolves.
 
-A stable release should demonstrate useful, source-supported findings and fewer avoidable mistakes on representative tasks. Installation checks and Markdown validation alone do not establish that quality.
+A stable release should demonstrate useful, source-supported findings and fewer avoidable mistakes. More rules alone do not establish that quality.
+
+## Maintain and validate
+
+Run structural checks with Python 3.9 or later:
+
+```sh
+python3 scripts/validate.py
+```
+
+On a Mac with full Xcode and the required SDKs installed:
+
+```sh
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer python3 scripts/typecheck_examples.py
+```
+
+The second command checks declared deployment targets without changing your global Xcode selection. It does not launch simulators or test interaction. Source-review dates are updated only after a substantive review, not merely a successful URL request.
 
 ## Build it together
 

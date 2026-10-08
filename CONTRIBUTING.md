@@ -20,6 +20,14 @@ For larger changes, discuss the scope in an issue before investing in implementa
 
 Do not copy another skill's instructions or redistribute Apple design assets or documentation. Quote sparingly with attribution where appropriate.
 
+## Validate the change
+
+Run `python3 scripts/validate.py`. When changing Swift examples, also run `scripts/typecheck_examples.py` with full Xcode selected through `DEVELOPER_DIR`. Record unavailable SDKs rather than silently skipping them.
+
+Update `apple-hig-skill/references/sources.json` when substantively checking a source. Keep review scope honest. Add a focused case to `evals/cases.json` for a new behavior or observed regression, including a valid design that should not be flagged where relevant. Follow `evals/README.md` before reporting behavioral results.
+
+Keep README text, instructions, examples, and repository documentation in English. Reports and discussions may use the contributor's preferred language.
+
 ## Review and credit
 
 The maintainer reviews pull requests before merging. A proposal is welcome even if its implementation is not accepted. Be specific, constructive, and respectful; discuss the work rather than the person.

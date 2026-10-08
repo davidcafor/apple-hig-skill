@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apple HIG Skill"
+  short_description: "Native Apple interface design and HIG review"
+  default_prompt: "Use $apple-hig-skill to review this interface for platform conventions, accessibility, and adaptive layout, with official sources."

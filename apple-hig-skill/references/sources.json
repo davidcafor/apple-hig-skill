@@ -1,0 +1,359 @@
+[
+  {
+    "id": "designing-for-ios",
+    "title": "Designing for iOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "designing-for-ipados",
+    "title": "Designing for iPadOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ipados",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "designing-for-macos",
+    "title": "Designing for macOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "designing-for-watchos",
+    "title": "Designing for watchOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "designing-for-tvos",
+    "title": "Designing for tvOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "designing-for-visionos",
+    "title": "Designing for visionOS",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full platform overview"
+  },
+  {
+    "id": "accessibility",
+    "title": "Accessibility",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "voiceover",
+    "title": "VoiceOver",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/voiceover",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "layout",
+    "title": "Layout",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "typography",
+    "title": "Typography",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "color",
+    "title": "Color",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/color",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "materials",
+    "title": "Materials",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "motion",
+    "title": "Motion",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "right-to-left",
+    "title": "Right to left",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/right-to-left",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "writing",
+    "title": "Writing",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/writing",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "navigation-and-search",
+    "title": "Navigation and search",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/navigation-and-search",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "tab-bars",
+    "title": "Tab bars",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "sidebars",
+    "title": "Sidebars",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "toolbars",
+    "title": "Toolbars",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "search-fields",
+    "title": "Search fields",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/search-fields",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "sheets",
+    "title": "Sheets",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "popovers",
+    "title": "Popovers",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/popovers",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "alerts",
+    "title": "Alerts",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/alerts",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "action-sheets",
+    "title": "Action sheets",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/action-sheets",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "buttons",
+    "title": "Buttons",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "menus",
+    "title": "Menus",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/menus",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "context-menus",
+    "title": "Context menus",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/context-menus",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "text-fields",
+    "title": "Text fields",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "toggles",
+    "title": "Toggles",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/toggles",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "pickers",
+    "title": "Pickers",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/pickers",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "segmented-controls",
+    "title": "Segmented controls",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/segmented-controls",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "sliders",
+    "title": "Sliders",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/sliders",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "settings",
+    "title": "Settings",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/settings",
+    "reviewed": "2026-10-08",
+    "review_scope": "Full page"
+  },
+  {
+    "id": "onboarding",
+    "title": "Onboarding",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "loading",
+    "title": "Loading",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/loading",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "feedback",
+    "title": "Feedback",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/feedback",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "managing-accounts",
+    "title": "Managing accounts",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/managing-accounts",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "privacy",
+    "title": "Privacy",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/privacy",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "notifications",
+    "title": "Notifications",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/notifications",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "widgets",
+    "title": "Widgets",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "live-activities",
+    "title": "Live Activities",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/live-activities",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "complications",
+    "title": "Complications",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "carplay",
+    "title": "CarPlay",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/carplay",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "immersive-experiences",
+    "title": "Immersive experiences",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "spatial-layout",
+    "title": "Spatial layout",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-layout",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "focus-and-selection",
+    "title": "Focus and selection",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/focus-and-selection",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "keyboards",
+    "title": "Keyboards",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/keyboards",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "drag-and-drop",
+    "title": "Drag and drop",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "undo-and-redo",
+    "title": "Undo and redo",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "sf-symbols",
+    "title": "SF Symbols",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  },
+  {
+    "id": "windows",
+    "title": "Windows",
+    "url": "https://developer.apple.com/design/human-interface-guidelines/windows",
+    "reviewed": "2026-10-08",
+    "review_scope": "Recommendation headings and selected explanatory paragraphs"
+  }
+]

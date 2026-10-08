@@ -1,0 +1,308 @@
+[
+  {
+    "id": "ios-cancel",
+    "platform": "iOS",
+    "prompt": "Review only. A sheet binds TextField directly to the saved model title. Cancel only calls dismiss(). Identify problems without editing.",
+    "expected": [
+      "Report that Cancel does not undo the edit",
+      "Recommend draft/commit semantics as implementation interpretation",
+      "Respect review-only scope"
+    ],
+    "forbidden": [
+      "Claim Apple requires a specific property wrapper",
+      "Edit files"
+    ]
+  },
+  {
+    "id": "ios-icon",
+    "platform": "iOS",
+    "prompt": "The only Save action is Image(systemName: \"tray.and.arrow.down\").onTapGesture { save() }. It has no accessibility modifiers. Review it.",
+    "expected": [
+      "Identify missing semantic button behavior and accessible meaning",
+      "Recommend Button with useful label",
+      "Require runtime VoiceOver verification"
+    ],
+    "forbidden": [
+      "Claim VoiceOver was tested from code"
+    ]
+  },
+  {
+    "id": "ipad-collapse",
+    "platform": "iPadOS",
+    "prompt": "A three-column browser clears the selected document and unsaved draft whenever its window becomes compact. Fix the adaptation plan.",
+    "expected": [
+      "Preserve selection and draft state",
+      "Maintain a path to each destination at narrow widths"
+    ],
+    "forbidden": [
+      "Require three columns at every width",
+      "Hide essential functionality"
+    ]
+  },
+  {
+    "id": "mac-settings",
+    "platform": "macOS",
+    "prompt": "App settings exist only in a custom sheet reached through a gear icon; there is no Settings app-menu item. Review.",
+    "expected": [
+      "Explain native Settings command and shortcut expectation",
+      "Suggest integrating a Settings scene"
+    ],
+    "forbidden": [
+      "Ban a supplementary gear shortcut",
+      "Recommend iPhone-only navigation"
+    ]
+  },
+  {
+    "id": "watch-task",
+    "platform": "watchOS",
+    "prompt": "An activity timer puts Pause below a twelve-field preferences form. Propose a design.",
+    "expected": [
+      "Prioritize the brief active task and Pause",
+      "Move less-used preferences to a suitable secondary flow",
+      "Consider Crown and text legibility"
+    ],
+    "forbidden": [
+      "Shrink the complete iPhone form"
+    ]
+  },
+  {
+    "id": "tv-focus",
+    "platform": "tvOS",
+    "prompt": "A media screen uses tappable images as its only controls and has never been tested with a remote. Review from this description.",
+    "expected": [
+      "Investigate focusability and semantic controls",
+      "Specify directional focus and remote tests",
+      "Separate inferred risk from demonstrated runtime behavior"
+    ],
+    "forbidden": [
+      "Claim a remote focus test passed"
+    ]
+  },
+  {
+    "id": "vision-anchor",
+    "platform": "visionOS",
+    "prompt": "A tool panel is rigidly attached to the head to keep it always visible. Review the comfort implications.",
+    "expected": [
+      "Discuss head-locked content and comfort",
+      "Consider stable spatial placement",
+      "Require headset testing"
+    ],
+    "forbidden": [
+      "Certify comfort from a screenshot"
+    ]
+  },
+  {
+    "id": "tabs-actions",
+    "platform": "iOS",
+    "prompt": "A tab bar contains Home, Search, Delete All, and Settings. Delete All immediately deletes records. Review.",
+    "expected": [
+      "Separate navigation destinations from destructive actions",
+      "Offer an appropriate destructive-action flow"
+    ],
+    "forbidden": [
+      "Treat the destructive tab as normal navigation"
+    ]
+  },
+  {
+    "id": "tabs-valid",
+    "platform": "iPadOS",
+    "prompt": "Four stable destinations use native tabs that adapt to a sidebar. Empty destinations show useful empty states. Review; do not invent issues.",
+    "expected": [
+      "Accept the pattern absent contrary evidence",
+      "Keep empty destinations stable"
+    ],
+    "forbidden": [
+      "Demand removing empty tabs",
+      "Insist every iPad app uses three columns"
+    ]
+  },
+  {
+    "id": "custom-font-valid",
+    "platform": "macOS",
+    "prompt": "A custom font scales appropriately, supports required scripts, and passes measured readability checks. Is its custom origin a HIG violation?",
+    "expected": [
+      "Do not flag custom origin alone",
+      "Evaluate actual readability/adaptation if evidence changes"
+    ],
+    "forbidden": [
+      "Mandate system font without contextual justification"
+    ]
+  },
+  {
+    "id": "target-sizes",
+    "platform": "macOS",
+    "prompt": "Every toolbar button is 30 points tall. A reviewer says all Apple controls must be at least 44 points. Assess the claim.",
+    "expected": [
+      "Check platform and control context in current official sources",
+      "Reject a universal all-platform 44-point rule"
+    ],
+    "forbidden": [
+      "Replace every control based only on 44 points",
+      "Invent a numeric Apple rule"
+    ]
+  },
+  {
+    "id": "menus-context",
+    "platform": "macOS",
+    "prompt": "An unavailable action is disabled in the app menu. The same unavailable action appears in a context menu. Review each separately.",
+    "expected": [
+      "Distinguish ordinary and contextual menu guidance",
+      "Consider standard editing-command exceptions"
+    ],
+    "forbidden": [
+      "Apply one hide/disable rule to every menu"
+    ]
+  },
+  {
+    "id": "permission-denied",
+    "platform": "iOS",
+    "prompt": "After camera permission is denied, a notes app repeats its permission explanation every launch and blocks text-only notes. Review.",
+    "expected": [
+      "Keep unrelated tasks available",
+      "Explain relevant permission recovery without repeated blocking"
+    ],
+    "forbidden": [
+      "Claim permission can always be prompted again programmatically"
+    ]
+  },
+  {
+    "id": "loading-failure",
+    "platform": "iOS",
+    "prompt": "A failed upload leaves an indefinite spinner and clears the user draft. Propose recovery behavior.",
+    "expected": [
+      "Distinguish loading and failure",
+      "Preserve user work and offer appropriate retry",
+      "Avoid fake progress"
+    ],
+    "forbidden": [
+      "Only replace spinner styling"
+    ]
+  },
+  {
+    "id": "rtl",
+    "platform": "iOS",
+    "prompt": "The app mirrors every image and icon for Arabic, including photographs, numbers, and a media timeline. Review the strategy.",
+    "expected": [
+      "Use contextual RTL adaptation",
+      "Do not blindly mirror intrinsic-direction content",
+      "Test mixed-direction strings"
+    ],
+    "forbidden": [
+      "Mirror all content uniformly"
+    ]
+  },
+  {
+    "id": "motion",
+    "platform": "visionOS",
+    "prompt": "Success is conveyed only by a bouncing shape; no status text or semantic value changes. Propose an accessible implementation.",
+    "expected": [
+      "Retain meaningful feedback without motion",
+      "Respect Reduce Motion",
+      "Check announcement behavior"
+    ],
+    "forbidden": [
+      "Remove all feedback when reduced motion is enabled"
+    ]
+  },
+  {
+    "id": "widget-stale",
+    "platform": "iOS",
+    "prompt": "A widget shows cached transport data without any stale state and deep-links to deleted trips. Review.",
+    "expected": [
+      "Handle stale information and missing destinations",
+      "Check supported WidgetKit presentation and interaction rules"
+    ],
+    "forbidden": [
+      "Assume widgets run arbitrary live view logic"
+    ]
+  },
+  {
+    "id": "live-activity",
+    "platform": "iOS",
+    "prompt": "A developer wants a Live Activity showing a permanent unrelated promotion. Review its suitability.",
+    "expected": [
+      "Tie the surface to an ongoing activity",
+      "Check current ActivityKit/platform support"
+    ],
+    "forbidden": [
+      "Approve solely because the API accepts text"
+    ]
+  },
+  {
+    "id": "carplay",
+    "platform": "CarPlay",
+    "prompt": "A custom iPhone settings UI is proposed for a CarPlay app before category or entitlement eligibility has been checked. Plan next steps.",
+    "expected": [
+      "Determine supported category/templates and eligibility",
+      "Keep driving interactions brief",
+      "Do not require unlocking phone for in-car error recovery"
+    ],
+    "forbidden": [
+      "Promise arbitrary custom CarPlay screens"
+    ]
+  },
+  {
+    "id": "deployment",
+    "platform": "iOS",
+    "prompt": "The app supports iOS 16. Implement an interface improvement without raising that target; a proposed API exists only in a newer OS.",
+    "expected": [
+      "Check exact API availability",
+      "Use compatible implementation or availability branch and fallback",
+      "Preserve deployment target"
+    ],
+    "forbidden": [
+      "Raise target without authorization",
+      "Assume newest SDK means oldest OS support"
+    ]
+  },
+  {
+    "id": "evidence-contrast",
+    "platform": "iOS",
+    "prompt": "Given source code only, confirm that translucent text has sufficient contrast over every user photo.",
+    "expected": [
+      "Decline to certify unmeasured rendering",
+      "Describe rendered contrast measurement under representative states"
+    ],
+    "forbidden": [
+      "Claim contrast passes from semantic colors alone"
+    ]
+  },
+  {
+    "id": "scope-narrow",
+    "platform": "macOS",
+    "prompt": "Fix one clipped localized button label. Do not redesign navigation or change persistence.",
+    "expected": [
+      "Fix layout or wrapping within scope",
+      "Test long labels and sizing"
+    ],
+    "forbidden": [
+      "Rewrite persistence or navigation without necessity"
+    ]
+  },
+  {
+    "id": "notification-private",
+    "platform": "iOS",
+    "prompt": "A notification includes full private medical details in its visible preview and opens a record that may have been deleted. Review design risks only.",
+    "expected": [
+      "Discuss preview privacy and appropriate policy",
+      "Handle expired destinations",
+      "Avoid making unsupported legal compliance claims"
+    ],
+    "forbidden": [
+      "Certify legal compliance"
+    ]
+  },
+  {
+    "id": "offline-source",
+    "platform": "watchOS",
+    "prompt": "You cannot access current Apple documentation. Assess a disputed numerical control-size claim using only the dated skill library.",
+    "expected": [
+      "Label freshness and uncertainty",
+      "Explain need for live source verification",
+      "Do not fabricate a verification date"
+    ],
+    "forbidden": [
+      "Pretend live browsing succeeded"
+    ]
+  }
+]
