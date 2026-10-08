@@ -64,13 +64,63 @@ No npm package or account is required to publish this skill: the installer reads
 
 For manual installation, copy the `apple-hig-skill/` directory into your agent's supported skills directory, preserving the included license and attribution files.
 
-Then ask:
+## Use with Claude Code
 
-> Use apple-hig-skill to review the navigation and settings in this macOS app. Explain each finding and link to the relevant Apple guidance.
+Install for Claude Code from your app's project directory:
 
-Or:
+```sh
+npx skills add davidcafor/apple-hig-skill --skill apple-hig-skill --agent claude-code
+```
 
-> Use apple-hig-skill to plan how this feature should adapt between iPhone and iPad. Preserve the project's supported OS versions.
+Then type this **inside Claude Code**, not in your terminal shell:
+
+```text
+/apple-hig-skill Review this app's interface against Apple's HIG. Focus on navigation, layout and accessibility. Report findings with sources; do not edit files yet.
+```
+
+For a focused implementation task:
+
+```text
+/apple-hig-skill Improve SettingsView for macOS. Use native settings conventions, preserve the deployment target, and implement the changes. Explain the relevant HIG guidance and what you tested.
+```
+
+Claude Code exposes installed skills as `/skill-name` commands. See the [official skill documentation](https://code.claude.com/docs/en/skills).
+
+## Use with Codex
+
+Install for Codex from your app's project directory:
+
+```sh
+npx skills add davidcafor/apple-hig-skill --skill apple-hig-skill --agent codex
+```
+
+Then mention the skill **in the Codex prompt**:
+
+```text
+$apple-hig-skill Review this app's interface against Apple's HIG. Focus on navigation, layout and accessibility. Report findings with sources; do not edit files yet.
+```
+
+For a focused implementation task:
+
+```text
+$apple-hig-skill Adapt this screen for iPhone and iPad. Preserve access to essential actions at narrow widths, support larger text, and implement the changes using APIs available to this project.
+```
+
+In Codex CLI and the IDE extension, type `$` to select a skill or use `/skills`. If a newly installed skill does not appear, restart Codex. See the [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
+
+## More example prompts
+
+Use `/apple-hig-skill` in Claude Code or `$apple-hig-skill` in Codex before any of these requests. You can write your request in your preferred language.
+
+| Goal | Request |
+| --- | --- |
+| Review one file | Review SettingsView.swift for platform conventions and accessibility. Identify concrete problems and link each finding to Apple guidance. |
+| Design a new feature | Plan a native search experience for iPhone, iPad and Mac. Explain navigation and presentation choices before implementation. |
+| Check accessibility | Review labels, text scaling, focus order and reduced-motion behavior. Separate code findings from checks that need a running app. |
+| Adapt to Apple Watch | Plan a brief watchOS interaction for this feature. Explain which content and actions should be prioritized. |
+| Fix a known problem | Fix the clipped actions on this narrow iPad layout. Preserve the current deployment target and unrelated behavior. |
+
+These are requests for the foundation workflow, not evidence of complete or tested coverage in each area. Give the agent access to the relevant project files; screenshots can support visual review but cannot prove interaction or accessibility behavior.
 
 ## How it works
 
@@ -81,6 +131,20 @@ Or:
 5. Report what was verified and what still needs visual or device testing.
 
 The skill uses original summaries and links to Apple documentation. It does not bundle Apple's manuals or design assets.
+
+## Roadmap toward a stable release
+
+The current release establishes the workflow. The following work is still pending:
+
+- **Detailed platform references:** separate, actionable guidance for iOS, iPadOS, macOS, watchOS, tvOS and visionOS.
+- **Component decisions:** navigation, tabs, sidebars, toolbars, settings, sheets, popovers, alerts, forms, search and empty states, including contextual exceptions.
+- **Accessibility and adaptation:** text scaling, assistive technologies, contrast, motion, keyboard and focus, localization, and changing window sizes.
+- **Traceable rules:** exact Apple sources, actual verification dates, applicable platforms, guidance strength and implementation interpretations.
+- **Practical examples:** original before/after examples verified against their stated SDK and deployment targets.
+- **Behavioral evaluations:** realistic tasks with and without the skill, valid designs that must not be flagged, and regressions checked in both Claude Code and Codex.
+- **Maintenance:** source review, coverage tracking and release notes as guidance evolves.
+
+A stable release should demonstrate useful, source-supported findings and fewer avoidable mistakes on representative tasks. Installation checks and Markdown validation alone do not establish that quality.
 
 ## Build it together
 
