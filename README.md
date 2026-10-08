@@ -1,4 +1,4 @@
-![Apple HIG Skill — interfaces across Apple devices.](assets/banner.png)
+![Apple HIG Skill — interface layouts, appearance settings, navigation and accessible controls.](assets/banner.png)
 
 <div align="center">
 
