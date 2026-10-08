@@ -1,4 +1,4 @@
-![Apple HIG Skill — iPhone settings, Mac appearance controls and an Apple Watch timer interface.](assets/banner.png)
+![Apple HIG Skill — an actual macOS Appearance screenshot with illustrated iPhone and Watch interfaces.](assets/banner.png)
 
 <div align="center">
 
