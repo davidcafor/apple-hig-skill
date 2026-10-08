@@ -1,3 +1,5 @@
+![Apple HIG Skill — Make every platform feel like home. By davidcafor.](assets/banner.png)
+
 <div align="center">
 
 # Apple HIG Skill
@@ -40,7 +42,27 @@ The initial skill establishes a source-backed review workflow and platform routi
 
 ## Try the foundation
 
-Copy the `apple-hig-skill/` directory into the skills directory supported by your agent. The entry point is `apple-hig-skill/SKILL.md`. Installation paths and invocation syntax depend on your agent.
+With [Node.js](https://nodejs.org/) installed, run this command from the project where you want to use the skill:
+
+```sh
+npx skills add davidcafor/apple-hig-skill --skill apple-hig-skill
+```
+
+The [Skills CLI](https://github.com/vercel-labs/skills) lets you select your coding agent and installation options. To make the skill available across projects, add `--global`:
+
+```sh
+npx skills add davidcafor/apple-hig-skill --skill apple-hig-skill --global
+```
+
+To inspect the available skill without installing it:
+
+```sh
+npx skills add davidcafor/apple-hig-skill --list
+```
+
+No npm package or account is required to publish this skill: the installer reads its `SKILL.md` and supporting files directly from this public GitHub repository. This remains a foundation preview; installation does not imply complete HIG coverage.
+
+For manual installation, copy the `apple-hig-skill/` directory into your agent's supported skills directory, preserving the included license and attribution files.
 
 Then ask:
 
