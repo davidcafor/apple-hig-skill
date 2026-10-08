@@ -1,4 +1,4 @@
-![Apple HIG Skill — Make every platform feel like home. By davidcafor.](assets/banner.png)
+![Apple HIG Skill — interfaces across Apple devices.](assets/banner.png)
 
 <div align="center">
 
